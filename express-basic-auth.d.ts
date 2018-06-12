@@ -39,7 +39,7 @@ declare namespace expressBasicAuth {
 
     type AsyncAuthorizerCallback = (err: any, authed?: boolean) => void
 
-    type AsyncAuthorizer = (username: string, password: string, callback: AsyncAuthorizerCallback) => void
+    type AsyncAuthorizer = (username: string, password: string, req: any, callback: AsyncAuthorizerCallback) => void
 
     type ValueOrFunction<T> = T | ((req: IBasicAuthedRequest) => T)
 
